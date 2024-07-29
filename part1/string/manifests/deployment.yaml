@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: string-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: string
+  template:
+    metadata:
+      labels:
+        app: string
+    spec:
+      containers:
+        - name: string
+          image: mightbespring/devopswithk8s:part1-string
